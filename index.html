@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body>
@@ -49,7 +49,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about" >
+    <section class="about" id="about">
         <div class="background-animation"></div>
         <div class="container">
             <div class="section-title">
@@ -59,7 +59,11 @@
 
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am Sandhyarani Raut, a <b style="color: var(--primary-color);">Data Analyst </b> with a strong foundation in data exploration, visualization, and predictive modeling. With a Bachelor of Engineering degree and hands-on experience from internships at Chandrapur Super Thermal Power Station and STAR Engineering Private Limited, I have developed expertise in analyzing complex datasets to derive actionable insights.</p>
+                    <p>I am Sandhyarani Raut, a <b style="color: var(--primary-color);">Data Analyst </b> with a strong
+                        foundation in data exploration, visualization, and predictive modeling. With a Bachelor of
+                        Engineering degree and hands-on experience from internships at Chandrapur Super Thermal Power
+                        Station and STAR Engineering Private Limited, I have developed expertise in analyzing complex
+                        datasets to derive actionable insights.</p>
                 </div>
 
                 <div class="skills-grid">
@@ -168,7 +172,7 @@
         </div>
     </section>
 
- 
+
     <section class="projects-section" id="projects">
         <div class="section-header">
             <h2>My Projects</h2>
@@ -180,120 +184,120 @@
         </div>
     </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="section-title">
-        <h2>Get in Touch</h2>
-        <p>Let's discuss how we can work together</p>
-    </div>
-    <form class="contact-form">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" required>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Get in Touch</h2>
+            <p>Let's discuss how we can work together</p>
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" required>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="hire-me">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://github.com/SANDHYARAUT07"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sandhyarani-raut-4bb052232/"><i class="fab fa-linkedin"></i></a>
         </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="hire-me">Send Message</button>
-    </form>
-    <div class="social-links">
-        <a href="https://github.com/SANDHYARAUT07"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sandhyarani-raut-4bb052232/"><i class="fab fa-linkedin"></i></a>
-    </div>
-</section>
+    </section>
 
-<script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Get in Touch button scroll to contact section
+        document.querySelector('.get-in-touch').addEventListener('click', function () {
+            document.querySelector('#contact').scrollIntoView({
                 behavior: 'smooth'
             });
         });
-    });
 
-    // Get in Touch button scroll to contact section
-    document.querySelector('.get-in-touch').addEventListener('click', function () {
-        document.querySelector('#contact').scrollIntoView({
-            behavior: 'smooth'
+        // Form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
         });
-    });
 
-    // Form submission handler
-    document.querySelector('.contact-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
-    });
+        // Hire Me button handler (you can modify this to download resume)
+        document.querySelector('.hire-me').addEventListener('click', function () {
+            window.open('./img/Sandhya_Raut.pdf', '_blank');
+        });
 
-    // Hire Me button handler (you can modify this to download resume)
-    document.querySelector('.hire-me').addEventListener('click', function () {
-        window.open('./img/Sandhya_Raut.pdf', '_blank');
-    });
-    /*
-     // Project data
-     const projects = [
-     {
-         title: "Exploring the NYC Airbnb Market",
-         description: "Exploratory data analysis on AirBnb Market, taking out Insights that affect them in market",
-         image: "https://images.pexels.com/photos/5077042/pexels-photo-5077042.jpeg",
-         github: "#",
-         demo: "#",
-         tags: ["Data Analysis", "Python", "Visualization"]
-     },
-     {
-         title: "FlipKart Reviews Scraping",
-         description: "Users can enter a product name using web form, and the list of reviews and comment appears for the user.",
-         image: "https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg",
-         github: "https://github.com/prashdev01/The_initial_project",
-         demo: "#",
-         tags: ["Web Scraping", "Python", "Flask"]
-     },
-     {
-         title: "Dynamic QR Generator",
-         description: "Users can enter a URL through a web form, and the application converts it into a QR code, which can be downloaded for later use.",
-         image: "https://images.pexels.com/photos/7843978/pexels-photo-7843978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-         github: "https://github.com/prashdev01/Dynamic-QR-Code-Generator",
-         demo: "#",
-         tags: ["Python", "QR Code", "Web App"]
-     },
-     {
-         title: "Customer Segmentation Analysis",
-         description: "Advanced clustering analysis to identify key customer segments and behavior patterns.",
-         image: "https://images.pexels.com/photos/16282318/pexels-photo-16282318/free-photo-of-a-person-filling-in-documents.jpeg",
-         github: "#",
-         demo: "#",
-         tags: ["Data Science", "Machine Learning", "Python"]
-     },
-     {
-         title: "Sales Trend Analysis",
-         description: "Comprehensive analysis of year-over-year sales data with predictive modeling.",
-         image: "https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg",
-         github: "#",
-         demo: "#",
-         tags: ["Data Analysis", "Forecasting", "Python"]
-     },
-     {
-         title: "Sentiment Analysis",
-         description: "NLP-based analysis of product reviews to extract customer sentiment and feedback.",
-         image: "https://images.pexels.com/photos/669612/pexels-photo-669612.jpeg",
-         github: "#",
-         demo: "#",
-         tags: ["NLP", "Machine Learning", "Python"]
-     } 
- ];
- */
-/*
+        // Project data
+        const projects = [
+            {
+                title: "Blinkit Sales Analysis",
+                description: "Power BI Dashboard analyzing sales and performance metrics for Blinkit.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnF2aWmhEzafYFdswqz0eLfVUMPhi0eDQM9QiGAVm94hdj2lMiiTbnXjN6cyCJDqK1s6U&usqp=CAU",
+                github: "https://github.com/SANDHYARAUT07/Blinkit-Sales-Analysis",
+                demo: "#",
+                tags: ["Data Analysis", "Power BI", "Visualization"]
+            },
+            {
+                title: "Exploring the SuperMarket-Sales",
+                description: "The Supermarket Sales Dashboard is a comprehensive Power BI report designed to provide insights into supermarket sales performance.",
+                image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                github: "#",
+                demo: "#",
+                tags: ["Data Analysis", "PowerBI", "Visualization"]
+            },
+            {
+                title: "Dynamic QR Generator",
+                description: "Users can enter a URL through a web form, and the application converts it into a QR code, which can be downloaded for later use.",
+                image: "https://images.pexels.com/photos/7843978/pexels-photo-7843978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                github: "https://github.com/prashdev01/Dynamic-QR-Code-Generator",
+                demo: "#",
+                tags: ["Python", "QR Code", "Web App"]
+            },
+            {
+                title: "Customer Segmentation Analysis",
+                description: "Advanced clustering analysis to identify key customer segments and behavior patterns.",
+                image: "https://images.pexels.com/photos/16282318/pexels-photo-16282318/free-photo-of-a-person-filling-in-documents.jpeg",
+                github: "#",
+                demo: "#",
+                tags: ["Data Science", "Machine Learning", "Python"]
+            },
+            {
+                title: "Sales Trend Analysis",
+                description: "Comprehensive analysis of year-over-year sales data with predictive modeling.",
+                image: "https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg",
+                github: "#",
+                demo: "#",
+                tags: ["Data Analysis", "Forecasting", "Python"]
+            },
+            {
+                title: "Sentiment Analysis",
+                description: "NLP-based analysis of product reviews to extract customer sentiment and feedback.",
+                image: "https://images.pexels.com/photos/669612/pexels-photo-669612.jpeg",
+                github: "#",
+                demo: "#",
+                tags: ["NLP", "Machine Learning", "Python"]
+            }
+        ];
 
- // Function to create project cards
- function createProjectCard(project) {
-     return `
+
+
+        // Function to create project cards
+        function createProjectCard(project) {
+            return `
          <div class="project-card">
              <div class="project-image-container">
                  <img 
@@ -325,16 +329,15 @@
              </div>
          </div>
      `;
- }
+        }
 
- // Render all projects
- document.addEventListener('DOMContentLoaded', () => {
-     const projectGrid = document.getElementById('projectGrid');
-     projectGrid.innerHTML = projects.map(project => createProjectCard(project)).join('');
- });
- */
+        // Render all projects
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectGrid = document.getElementById('projectGrid');
+            projectGrid.innerHTML = projects.map(project => createProjectCard(project)).join('');
+        });
 
-</script>
+    </script>
 </body>
 
 </html>
